@@ -1,6 +1,8 @@
+package week1;
+
 import java.util.Objects;
 
-public class Complex implements IComplex{
+public class Complex implements IComplex {
     double re;   // the real part
     double im;   // the imaginary part
 
@@ -12,7 +14,7 @@ public class Complex implements IComplex{
         im = imag;
     }
 
-    // return a string representation of the invoking Complex object
+    // return a string representation of the invoking week1.Complex object
     public String toString() {
         if (im == 0) return re + "";
         if (re == 0) return im + "i";
@@ -30,7 +32,7 @@ public class Complex implements IComplex{
         return Math.atan2(im, re);
     }
 
-    // return a new Complex object whose value is (this + b)
+    // return a new week1.Complex object whose value is (this + b)
     public IComplex plus(IComplex b) {
         Complex a = this;             // invoking object
         double real = a.re + b.re();
@@ -38,7 +40,7 @@ public class Complex implements IComplex{
         return new Complex(real, imag);
     }
 
-    // return a new Complex object whose value is (this - b)
+    // return a new week1.Complex object whose value is (this - b)
     public IComplex minus(IComplex b) {
         Complex a = this;
         double real = a.re - b.re();
@@ -46,7 +48,7 @@ public class Complex implements IComplex{
         return new Complex(real, imag);
     }
 
-    // return a new Complex object whose value is (this * b)
+    // return a new week1.Complex object whose value is (this * b)
     public IComplex times(IComplex b) {
         Complex a = this;
         double real = a.re * b.re() - a.im * b.im();
@@ -59,12 +61,12 @@ public class Complex implements IComplex{
         return new Complex(alpha * re, alpha * im);
     }
 
-    // return a new Complex object whose value is the conjugate of this
+    // return a new week1.Complex object whose value is the conjugate of this
     public IComplex conjugate() {
         return new Complex(re, -im);
     }
 
-    // return a new Complex object whose value is the reciprocal of this
+    // return a new week1.Complex object whose value is the reciprocal of this
     public IComplex reciprocal() {
         double scale = re*re + im*im;
         return new Complex(re / scale, -im / scale);
@@ -80,22 +82,22 @@ public class Complex implements IComplex{
         return a.times(b.reciprocal());
     }
 
-    // return a new Complex object whose value is the complex exponential of this
+    // return a new week1.Complex object whose value is the complex exponential of this
     public IComplex exp() {
         return new Complex(Math.exp(re) * Math.cos(im), Math.exp(re) * Math.sin(im));
     }
 
-    // return a new Complex object whose value is the complex sine of this
+    // return a new week1.Complex object whose value is the complex sine of this
     public IComplex sin() {
         return new Complex(Math.sin(re) * Math.cosh(im), Math.cos(re) * Math.sinh(im));
     }
 
-    // return a new Complex object whose value is the complex cosine of this
+    // return a new week1.Complex object whose value is the complex cosine of this
     public IComplex cos() {
         return new Complex(Math.cos(re) * Math.cosh(im), -Math.sin(re) * Math.sinh(im));
     }
 
-    // return a new Complex object whose value is the complex tangent of this
+    // return a new week1.Complex object whose value is the complex tangent of this
     public IComplex tan() {
         return sin().divides(cos());
     }
