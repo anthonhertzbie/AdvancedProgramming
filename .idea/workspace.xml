@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31589013-3cad-4bd2-b26f-ace458bde64a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/week1/ArrayStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week1/Stack.java" afterDir="false" />
+    <list default="true" id="31589013-3cad-4bd2-b26f-ace458bde64a" name="Changes" comment="ArrayStack and Stack interface made, and push method made and tested">
+      <change afterPath="$PROJECT_DIR$/src/main/java/week1/LinkedStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/week1/ArrayStackTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Complex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week1/Complex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IComplex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week1/IComplex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/week1/ArrayStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week1/ArrayStack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -47,13 +48,23 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ArrayStack">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="week1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.LinkedStack">
     <configuration name="ArrayStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="week1.ArrayStack" />
       <module name="AdvancedProgramming" />
@@ -74,12 +85,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LinkedStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="week1.LinkedStack" />
+      <module name="AdvancedProgramming" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="week1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayStackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AdvancedProgramming" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="week1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="week1" />
+      <option name="MAIN_CLASS_NAME" value="week1.ArrayStackTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayStackTest.push" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AdvancedProgramming" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="week1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="week1" />
+      <option name="MAIN_CLASS_NAME" value="week1.ArrayStackTest" />
+      <option name="METHOD_NAME" value="push" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LinkedStack" />
         <item itemvalue="Application.ArrayStack" />
-        <item itemvalue="Application.Complex" />
-        <item itemvalue="Application.Complex" />
-        <item itemvalue="Application.Complex" />
+        <item itemvalue="JUnit.ArrayStackTest" />
+        <item itemvalue="JUnit.ArrayStackTest.push" />
         <item itemvalue="Application.Complex" />
       </list>
     </recent_temporary>
@@ -93,6 +148,8 @@
       <option name="presentableId" value="Default" />
       <updated>1675348228364</updated>
       <workItem from="1675348230024" duration="4027000" />
+      <workItem from="1675696950647" duration="6002000" />
+      <workItem from="1675801652828" duration="4631000" />
     </task>
     <task id="LOCAL-00001" summary="Complex Interfaces:)))">
       <created>1675352085518</created>
@@ -101,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675352085518</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ArrayStack and Stack interface made, and push method made and tested">
+      <created>1675453112557</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675453112557</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,17 +184,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Complex Interfaces:)))" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complex Interfaces:)))" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/week1/ArrayStack.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="ArrayStack and Stack interface made, and push method made and tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="ArrayStack and Stack interface made, and push method made and tested" />
   </component>
 </project>

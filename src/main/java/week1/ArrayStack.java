@@ -2,48 +2,53 @@ package week1;
 
 public class ArrayStack implements Stack{
 
-    private String[] arrayStack;
-    private int arrayTop;
-    private int arraySize;
+    private final String[] stack;
+    private int top;
+    private final int size;
 
-    public ArrayStack(int arraySize){
-        arrayStack = new String[arraySize];
-        arrayTop = 0;
-        this.arraySize = arraySize;
+    public ArrayStack(int size){
+        stack = new String[size];
+        top = 0;
+        this.size = size;
     }
 
     @Override
     public void push(String e) {
-        if (arrayTop < arraySize) {
-            arrayStack[arrayTop] = e;
-            arrayTop++;
-        } else if(arrayTop == arraySize){
-            System.out.println("The arrayStack is full");
+        if (top < size) {
+            stack[top] = e;
+            top++;
+        } else if(top == size){
+            System.out.println("The arrayStack is full, because max capacity is " + size);
         }
     }
     @Override
     public String pop() {
-        String top = arrayStack[arrayTop];
-        arrayStack[arrayTop] = null;
-        arrayTop--;
-        return top;
+        if(top > 0) {
+            top--;
+            String poppedValue = stack[top];
+            stack[top] = null;
+            return poppedValue;
+        } else{
+            System.out.println("ArrayStack is empty");
+            return null;
+        }
     }
 
     @Override
     public boolean isEmpty() {
-        return arrayTop == 0;
+        return top == 0;
     }
 
     @Override
     public boolean isFull() {
-        return arrayTop == arraySize;
+        return top == size;
     }
 
     @Override
     public void show() {
-        for (int i = 0; i < arraySize; i++) {
-            if(arrayStack[i] != null){
-                System.out.println(arrayStack[i]);
+        for (int i = size - 1; i >= 0; i--) {
+            if(stack[i] != null){
+                System.out.print(stack[i] + " ");
             }
         }
         System.out.println();
@@ -51,14 +56,14 @@ public class ArrayStack implements Stack{
 
     //for testing:
     public static void main(String[] args) {
-        ArrayStack a = new ArrayStack(5);
-        a.push("1");
-        a.push("2");
-        a.push("3");
-        a.show();
-        a.push("4");
-        a.push("5");
-        a.push("6");
+        var a = new ArrayStack(5);
+        a.push("This");
+        a.push("is");
+        a.push("a");
+        a.push("strange");
+        a.push("sentence");
+        a.push("hey");
         a.show();
     }
+
 }
