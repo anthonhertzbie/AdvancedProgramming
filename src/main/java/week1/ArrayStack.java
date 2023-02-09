@@ -64,6 +64,13 @@ public class ArrayStack implements Stack{
         a.push("sentence");
         a.push("hey");
         a.show();
+        a.pop();
+        a.pop();
+        a.pop();
+        a.pop();
+        a.pop();
+        a.pop();
+        a.pop();
     }
 
 }
